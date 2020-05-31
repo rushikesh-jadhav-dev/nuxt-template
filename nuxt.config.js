@@ -1,5 +1,22 @@
-var config = require('./settings.js');
-console.log(config);
+var firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
+};
+
+var config = { firebase: firebaseConfig };
+
+try {
+  config = require('./settings.js');
+}
+catch (ex) {
+  console.log("Setting file does not exist, we will use the default settings");
+}
 
 export default {
   mode: 'universal',

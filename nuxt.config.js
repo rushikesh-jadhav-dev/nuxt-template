@@ -74,8 +74,7 @@ export default {
           measurementId: config.firebase.measurementId
         },
         services: {
-          auth: true, // Just as example. Can be any other service
-          firestore: true
+          
         }
       }
     ]
